@@ -2,7 +2,7 @@
 const testButton = document.getElementById("test-button");
 
 //new instrument and connect to speakers
-const synth = new Tone.Synth().todestination();
+const synth = new Tone.Synth().toDestination();
 
 testButton.addEventListener("click", playTest);
 function playTest() {
