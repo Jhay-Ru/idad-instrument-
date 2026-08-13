@@ -9,13 +9,18 @@
     <script src="https://unpkg.com/tone"></script>
     <script src="main.js" defer></script>
   </head>
+
   <body>
-    <dialog>
-      Hi, this site will make some noise, be sure to have your audio enabled!
+    <dialog id="Intro-dialog">
+      <p>
+        Hi, this site will make some noise, be sure to have your audio enabled!
+      </p>
+      <button id="Intro-button-close">sure.</button>
     </dialog>
     <header>
       <h1>sound synth</h1>
     </header>
+
     <main>
       <button id="test-button">test sound</button>
     </main>

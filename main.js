@@ -11,10 +11,9 @@ introButtonClose.addEventListener("click", function closeIntroDialog() {
   introDialog.close(); //close dialog
 });
 
-introButtonClose.addEventListener("close", toneInit); //when user click close, load audio
+introDialog.addEventListener("close", toneInit); //when user click close, load audio
 //closeIntroDialog.addEventListener("click", ()=> {IntroDialog.close();}); //you can also use an arrow function
 
-//document.body.style.backgroundColor = "red";
 //--- sound player from button ---
 
 //// audio
