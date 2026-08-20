@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"); /*import font in css directly*/
+
+:root {
+  /*save custom values to reference later*/
+  --colour-01: #f2f2f2;
+  --colour-02: #bbbbbb;
+  --colour-03: #6b6b6b;
+  --colour-04: #2d2c2c;
+}
+
+@media (prefers-color-scheme: dark) {
+  /*if user has dark mode use this palette */
+  :root {
+    --colour-01: #2d2c2c;
+    --colour-02: #6b6b6b;
+    --colour-03: #bbbbbb;
+    --colour-04: #f2f2f2;
+  }
+}
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  background-color: var(--colour-01);
+  color: var(--colour-04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+dialog[open]/*square brackets only apply to the dialog element when it is open*/ {
+  background-color: var(--colour-02);
+  border: 4px solid var(--colour-04);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 3rem;
+  border-radius: 10px;
+  border: 4px solid var(--colour-03);
+  margin: 1rem;
+}
+button:hover {
+  scale: 0.95;
+}
+button:active {
+  border: 2px solid var(--colour-04);
+}
+header {
+  background-color: var(--colour-02);
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+div {
+  background-color: var(--colour-02);
+  border: 3px solid var(--colour-04);
+  border-radius: 10px;
+  margin: 5px;
+  height: 20px;
+  width: 20px;
+  padding: 15px;
+  cursor: default;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+div:hover {
+  scale: 0.95;
+}
+div:active {
+  background-color: #666666;
+}
