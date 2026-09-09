@@ -58,3 +58,28 @@ testButton.addEventListener("mousedown", playNote);
 key.addEventListener("mousedown", playNote);
 
 testButton.addEventListener("mousedown", playnote);
+
+//audio playback
+const playbackaudio = document.getElementById("Playback-audio");
+const audioTrack = document.getElementById("audio-track");
+function playpauseaudio() {
+  if (audioTrack.paused === true) {
+    audioTrack.play();
+  } else {
+    audioTrack.pause();
+  }
+}
+playbackaudio.addEventListener("click", playpauseaudio);
+
+//random
+const randomButton = document.getElementById("random-locator");
+randomButton.addEventListener("click", randomLocation); //move playback to random position
+function randomLocation() {
+  let trackLength = audioTrack.duration;
+  audioTrack.currentTime = trackLength * Math.random(); //set current time to random position
+}
+
+const image = document.getElementById("image");
+image.addEventListener("mouseenter", function () {
+  playNote();
+});
