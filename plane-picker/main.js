@@ -1,6 +1,9 @@
 // 1. Initialize Tone.js Synth
 const synth = new Tone.Synth().toDestination();
-
+const soundSelect = document.getElementById("sound-select");
+soundSelect.addEventListener("change", (e) => {
+  synth.oscillator.type = e.target.value;
+});
 // Base root note (e.g., C4)
 const BASE_NOTE = "C4";
 
@@ -73,7 +76,10 @@ pad.addEventListener("pointerup", (e) => {
 });
 
 //second pad //
-
+const soundSelect2 = document.getElementById("sound-select2");
+soundSelect2.addEventListener("change", (e) => {
+  synth2.oscillator.type = e.target.value;
+});
 const synth2 = new Tone.Synth().toDestination();
 
 const pad2 = document.getElementById("pad2");
